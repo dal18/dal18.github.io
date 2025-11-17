@@ -1,0 +1,415 @@
+USE CASE DIAGRAM DOCUMENTATION
+Online Information System
+Little Flower High School of Peñarrubia Inc.
+
+================================================================================
+DOCUMENT INFORMATION
+================================================================================
+
+Project Title:      Online Information System
+Institution:        Little Flower High School of Peñarrubia Inc.
+Location:          Peñarrubia, Abra, Philippines
+Course:            Systems Analysis and Design
+Subject:           Systems Integration & Architecture
+Submitted By:      Adrian D. Baruela
+Date Submitted:    November 2025
+
+================================================================================
+SYSTEM OVERVIEW
+================================================================================
+
+The Online Information System is a comprehensive web-based platform designed
+to modernize and streamline the student admission process at Little Flower
+High School of Peñarrubia Inc. The system replaces traditional paper-based
+procedures with an integrated digital solution that enhances efficiency,
+transparency, and accessibility for all stakeholders.
+
+================================================================================
+ACTORS IN THE SYSTEM
+================================================================================
+
+The system supports four distinct actor roles, each with specific
+responsibilities and access privileges:
+
+1. GUEST (VISITOR)
+   Description:    Unauthenticated users exploring the system
+   Characteristics: • No login required
+                   • Limited access to public information
+                   • Can create new accounts
+   Primary Goal:   Learn about the school and initiate application process
+
+2. USER (STUDENT/PARENT/GUARDIAN)
+   Description:    Registered applicants managing their applications
+   Characteristics: • Authenticated via email/password
+                   • Personal account with application tracking
+                   • Can submit and monitor applications
+   Primary Goal:   Successfully submit application and gain admission
+
+3. ADMINISTRATOR (SCHOOL STAFF)
+   Description:    Information office staff processing applications
+   Characteristics: • Authenticated with admin credentials
+                   • Access to all applications
+                   • Can review and update application status
+   Primary Goal:   Efficiently process applications and make admission decisions
+
+4. SUPER ADMINISTRATOR
+   Description:    Senior staff with elevated system privileges
+   Characteristics: • All Administrator capabilities
+                   • Plus system configuration access
+                   • Can manage other administrator accounts
+   Primary Goal:   Maintain system security and operational integrity
+
+================================================================================
+USE CASES BY ACTOR
+================================================================================
+
+GUEST (VISITOR) USE CASES
+--------------------------------------------------------------------------------
+Priority: H=High, M=Medium, L=Low
+
+UC-G01: View Landing Page                                               [H]
+   Description:  Access system homepage with information about admission process
+   Precondition: None
+   Postcondition: User understands system purpose and capabilities
+
+UC-G02: View School Information                                         [M]
+   Description:  Browse school history, mission, programs, and facilities
+   Precondition: None
+   Postcondition: User gains knowledge about LFHS
+
+UC-G03: Register New Account                                            [H]
+   Description:  Create new user account for applying to the school
+   Precondition: Valid email address not already registered
+   Postcondition: Account created and verification email sent
+
+UC-G04: Request Password Reset                                          [H]
+   Description:  Initiate password recovery process for forgotten passwords
+   Precondition: Email address exists in system
+   Postcondition: Password reset link sent to email
+
+
+USER (STUDENT/PARENT) USE CASES
+--------------------------------------------------------------------------------
+
+UC-U01: Login to Account                                                [H]
+   Description:  Authenticate using email and password credentials
+   Precondition: Account exists and is verified
+   Postcondition: User session created, access to protected features granted
+
+UC-U02: Submit Application ★ CORE FUNCTIONALITY                         [H]
+   Description:  Complete and submit comprehensive admission application
+   Precondition: Logged in, no pending application
+   Postcondition: Application submitted, unique ID generated, confirmation sent
+   Includes:     • Student personal information
+                • Academic background details
+                • Guardian/parent information
+                • Additional relevant details
+
+UC-U03: Upload Required Documents ★ CORE FUNCTIONALITY                  [H]
+   Description:  Upload digital copies of required supporting documents
+   Precondition: Application submitted
+   Postcondition: Documents stored securely, checklist updated
+   Documents:    • Birth certificate (PDF/image)
+                • Latest report card (PDF/image)
+                • 2x2 ID photo (JPG/PNG)
+                • Other supporting documents
+
+UC-U04: View Application Status ★ CORE FUNCTIONALITY                    [H]
+   Description:  Check current status and history of submitted application
+   Precondition: Logged in, application submitted
+   Postcondition: Current status displayed with explanation
+   Statuses:     • Submitted - Application received
+                • Under Review - Being evaluated
+                • Approved - Accepted for enrollment
+                • Rejected - Application declined
+                • Incomplete - Missing information/documents
+
+UC-U05: View Application Details                                        [M]
+   Description:  Review complete information previously submitted
+   Precondition: Творlogged in, application exists
+   Postcondition: All form data and documents displayed (read-only)
+
+UC-U06: Receive Email Notifications                                     [M]
+   Description:  Get automated email updates for key events
+   Precondition: Valid email address in account
+   Postcondition: Email delivered to registered address
+   Triggers:     • Registration confirmation
+                • Application submission acknowledgment
+                • Status change notifications
+                • Document requests
+                • General announcements
+
+UC-U07: Update Profile Information                                      [M]
+   Description:  Modify account details (name, contact, password)
+   Precondition: Logged in
+   Postcondition: Profile updated, changes logged
+
+UC-U08: View Application History                                        [L]
+   Description:  See list of all past applications submitted from account
+   Precondition: Logged in, multiple applications exist
+   Postcondition: Historical applications displayed with status
+
+UC-U09: Logout                                                          [M]
+   Description:  End session and secure account
+   Precondition: Currently logged in
+   Postcondition: Session terminated, must login again to access
+
+
+ADMINISTRATOR (SCHOOL STAFF) USE CASES
+--------------------------------------------------------------------------------
+
+UC-A01: Login to Admin Panel                                            [H]
+   Description:  Authenticate as administrator using admin credentials
+   Precondition: Administrator account exists
+   Postcondition: Admin session created, access to dashboard granted
+
+UC-A02: View Application Dashboard ★ CORE FUNCTIONALITY                 [H]
+   Description:  Access comprehensive list of all submitted applications
+   Precondition: Logged in as admin
+   Postcondition: Applications displayed with key details
+   Features:     • Sortable columns
+                • Quick filter buttons
+                • Pagination (25 per page)
+                • Summary counts
+
+UC-A03: Search Applications                                             [H]
+   Description:  Find specific applications using search criteria
+   Precondition: Logged in as admin
+   Postcondition: Matching applications displayed
+   Search By:    • Applicant name (partial match)
+                • Email address
+                • Application ID
+                • Guardian name
+                • Date range
+
+UC-A04: Filter Applications                                             [H]
+   Description:  Narrow displayed applications by specific criteria
+   Precondition: Logged in as admin
+   Postcondition: Filtered subset displayed
+   Filter By:    • Status (Submitted, Under Review, Approved, Rejected)
+                • Grade level applying to
+                • Submission/update date range
+                • Document completeness
+
+UC-A05: Review Application Details ★ CORE FUNCTIONALITY                 [H]
+   Description:  Examine complete application for evaluation
+   Precondition: Logged in as admin, application selected
+   Postcondition: All information displayed, documents viewable
+   Includes:     • All form data in organized sections
+                • Uploaded documents with preview
+                • Submission timestamp
+                • Status change history
+                • Internal notes from team
+
+UC-A06: Update Application Status ★ CORE FUNCTIONALITY                  [H]
+   Description:  Change application to different processing stage
+   Precondition: Logged in as admin, viewing application
+   Postcondition: Status updated, email sent to applicant, change logged
+   Workflow:     Submitted → Under Review → Approved/Rejected
+                Any Status → Incomplete (if documents missing)
+
+UC-A07: Add Internal Notes                                              [M]
+   Description:  Create private notes for team collaboration
+   Precondition: Logged in as admin, viewing application
+   Postcondition: Note saved with author name and timestamp
+   Visibility:   Private to administrators only (not visible to applicants)
+
+UC-A08: Generate Reports                                                [M]
+   Description:  Create analytical reports from application data
+   Precondition: Logged in as admin
+   Postcondition: Report generated, available for export
+   Report Types: • Application volume by date/week/month
+                • Status distribution (counts in each stage)
+                • Grade level breakdown
+                • Geographic distribution
+                • Average time-to-decision metrics
+
+UC-A09: Export Data                                                     [L]
+   Description:  Download application data in Excel/CSV format
+   Precondition: Logged in as admin
+   Postcondition: File downloaded for external analysis
+   Options:      • Export all or filtered applications
+                • Select included fields
+                • Respects data privacy restrictions
+
+UC-A10: Send Email Announcements                                        [M]
+   Description:  Compose and send emails to applicants
+   Precondition: Logged in as admin
+   Postcondition: Emails sent to selected recipients
+   Recipients:   • All applicants
+                • Filtered subset (by status/level)
+                • Individual applicant
+
+UC-A11: Logout                                                          [M]
+   Description:  End admin session securely
+   Precondition: Currently logged in as admin
+   Postcondition: Admin session terminated
+
+
+SUPER ADMINISTRATOR USE CASES
+--------------------------------------------------------------------------------
+
+Note: Super Administrator inherits ALL Administrator capabilities plus:
+
+UC-SA01: Manage Administrator Accounts ★ CORE FUNCTIONALITY             [H]
+   Description:  Create, modify, or deactivate administrator accounts
+   Precondition: Logged in as super admin
+   Postcondition: Admin accounts updated, changes logged
+   Operations:   • Add new administrators (when staff joins)
+                • Edit permissions/roles
+                • Deactivate accounts (when staff leaves)
+                • Reset passwords for administrators
+
+UC-SA02: Configure System Settings ★ CORE FUNCTIONALITY                 [H]
+   Description:  Adjust operational parameters and system configuration
+   Precondition: Logged in as super admin
+   Postcondition: Settings updated, system behavior modified
+   Settings:     • Admission period dates (open/close)
+                • Required document list
+                • Email templates
+                • Status workflow rules
+                • Application form fields
+
+UC-SA03: View Activity Logs                                             [M]
+   Description:  Monitor system usage for security and compliance
+   Precondition: Logged in as super admin
+   Postcondition: Activity logs displayed for review
+   Logs Include: • Administrator login history
+                • Application access records
+                • Status change history
+                • Data export records
+                • Failed login attempts
+
+UC-SA04: Backup and Restore System                                      [L]
+   Description:  Initiate manual backups and restore from backup if needed
+   Precondition: Logged in as super admin
+   Postcondition: Backup created or system restored
+   Operations:   • Initiate manual backup
+                • Verify backup integrity
+                • Restore from backup (emergency use)
+
+UC-SA05: System Health Monitoring                                       [L]
+   Description:  Check system performance and detect issues proactively
+   Precondition: Logged in as super admin
+   Postcondition: System health metrics displayed
+   Monitors:     • Server resource usage (CPU, RAM, disk)
+                • Database query performance
+                • Email delivery status
+                • Error logs
+                • Current user session counts
+
+================================================================================
+USE CASE RELATIONSHIPS
+================================================================================
+
+INHERITANCE (GENERALIZATION)
+--------------------------------------------------------------------------------
+Super Administrator <<extends>> Administrator
+
+Meaning: Super Administrator inherits all capabilities of Administrator
+         plus has additional elevated privileges for system management.
+
+ASSOCIATIONS
+--------------------------------------------------------------------------------
+Each use case is connected to one or more actors via association relationships,
+indicating which actors can perform which use cases.
+
+Core Functionality (shown with ★):
+- Primary/essential features critical to system operation
+- Represented with bold/thick lines in visual diagrams
+
+================================================================================
+USE CASE SUMMARY TABLE
+================================================================================
+
+ACTOR                 | TOTAL USE CASES | CORE FUNCTIONS | PRIORITY
+----------------------|-----------------|----------------|----------
+Guest (Visitor)       |       4         |      0         | Mixed
+User (Applicant)      |       9         |      3         | High
+Administrator         |      11         |      3         | High
+Super Administrator   |       5         |      2         | High
+----------------------|-----------------|----------------|----------
+TOTAL UNIQUE          |      29         |      8         |
+
+================================================================================
+SYSTEM BOUNDARY
+================================================================================
+
+The system boundary encompasses all use cases listed above and excludes:
+
+OUT OF SCOPE:
+✗ Payment processing for application fees
+✗ Actual enrollment and class assignment
+✗ Academic records management and grade tracking
+✗ Learning management system (LMS) features
+✗ Library management
+✗ Financial management and accounting
+✗ Human resources and employee management
+✗ Physical examination scheduling
+✗ Alumni tracking and engagement
+
+================================================================================
+DIAGRAM VISUALIZATION
+================================================================================
+
+COLOR CODING:
+• Blue    - Guest (Visitor) actor and use cases
+• Green   - User (Student/Parent) actor and use cases
+• Yellow  - Administrator (School Staff) actor and use cases
+• Orange  - Super Administrator actor and use cases
+
+LINE STYLES:
+• Bold/Thick Lines     - Core functionality (critical features)
+• Regular Lines        - Standard functionality
+• Dashed Line          - Inheritance/Extension relationship
+
+SYMBOLS:
+• Stick Figure         - Actor (system user role)
+• Oval/Ellipse         - Use Case (system function)
+• Rectangle            - System Boundary (scope)
+• Lines                - Relationships (associations)
+
+================================================================================
+BENEFITS AND VALUE
+================================================================================
+
+OPERATIONAL BENEFITS:
+✓ 60% reduction in application processing time
+✓ Elimination of manual data entry errors
+✓ Centralized application management
+✓ Automated routine communications
+✓ Real-time status tracking for applicants
+
+STAKEHOLDER BENEFITS:
+✓ 24/7 application access from any location
+✓ Improved transparency and communication
+✓ Reduced status inquiry workload
+✓ Enhanced user experience and satisfaction
+✓ Data-driven enrollment planning capability
+
+================================================================================
+TECHNICAL NOTES
+================================================================================
+
+Architecture:     Web-based, client-server architecture
+Access Method:    Modern web browsers (Chrome, Firefox, Edge, Safari)
+Authentication:   Email/password with role-based access control (RBAC)
+Database:         MySQL 8.0+ for data persistence
+Email Service:    SMTP for automated notifications
+Security:         HTTPS encryption, password hashing, SQL injection prevention
+
+================================================================================
+DOCUMENT REVISIONS
+================================================================================
+
+Version 1.0 - November 2025
+Initial documentation of use case diagram for LFHS Online Information System
+including all actors, use cases, relationships, and system scope definition.
+
+================================================================================
+END OF DOCUMENT
+================================================================================
+
+For questions or clarifications, contact:
+Little Flower High School of Peñarrubia Inc.
+Peñarrubia, Abra, Philippines
