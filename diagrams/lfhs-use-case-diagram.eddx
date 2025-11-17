@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://www.edrawsoft.com/2008/EdrawMax"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.edrawsoft.com/2008/EdrawMax EdrawMax.xsd">
+  <Application>Edraw Max</Application>
+  <Version>10.0</Version>
+  <Pages>
+    <Page>
+      <Name>LFHS Use Case Diagram</Name>
+      <Width>1600</Width>
+      <Height>1400</Height>
+      <Shapes>
+
+        <!-- System Boundary -->
+        <Shape ID="1" Type="Rectangle">
+          <Text>Online Information System&#10;Little Flower High School of Peñarrubia Inc.</Text>
+          <X>350</X>
+          <Y>60</Y>
+          <Width>900</Width>
+          <Height>1280</Height>
+          <FillColor>#F5F5F5</FillColor>
+          <LineColor>#666666</LineColor>
+          <LineWidth>2</LineWidth>
+          <FontSize>18</FontSize>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <!-- ACTORS -->
+
+        <!-- Guest Actor -->
+        <Shape ID="2" Type="Actor">
+          <Text>Guest&#10;(Visitor)</Text>
+          <X>150</X>
+          <Y>180</Y>
+          <Width>60</Width>
+          <Height>120</Height>
+          <FillColor>#DAE8FC</FillColor>
+          <LineColor>#6C8EBF</LineColor>
+        </Shape>
+
+        <!-- User Actor -->
+        <Shape ID="3" Type="Actor">
+          <Text>User&#10;(Student/Parent)</Text>
+          <X>150</X>
+          <Y>550</Y>
+          <Width>60</Width>
+          <Height>120</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <!-- Administrator Actor -->
+        <Shape ID="4" Type="Actor">
+          <Text>Administrator&#10;(School Staff)</Text>
+          <X>1350</X>
+          <Y>550</Y>
+          <Width>60</Width>
+          <Height>120</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <!-- Super Administrator Actor -->
+        <Shape ID="5" Type="Actor">
+          <Text>Super&#10;Administrator</Text>
+          <X>1350</X>
+          <Y>1050</Y>
+          <Width>60</Width>
+          <Height>120</Height>
+          <FillColor>#FFE6CC</FillColor>
+          <LineColor>#D79B00</LineColor>
+        </Shape>
+
+        <!-- GUEST USE CASES -->
+
+        <Shape ID="10" Type="Ellipse">
+          <Text>View Landing Page</Text>
+          <X>450</X>
+          <Y>100</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#DAE8FC</FillColor>
+          <LineColor>#6C8EBF</LineColor>
+        </Shape>
+
+        <Shape ID="11" Type="Ellipse">
+          <Text>View School&#10;Information</Text>
+          <X>450</X>
+          <Y>180</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#DAE8FC</FillColor>
+          <LineColor>#6C8EBF</LineColor>
+        </Shape>
+
+        <Shape ID="12" Type="Ellipse">
+          <Text>Register New&#10;Account</Text>
+          <X>450</X>
+          <Y>260</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#DAE8FC</FillColor>
+          <LineColor>#6C8EBF</LineColor>
+        </Shape>
+
+        <Shape ID="13" Type="Ellipse">
+          <Text>Request Password&#10;Reset</Text>
+          <X>450</X>
+          <Y>340</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#DAE8FC</FillColor>
+          <LineColor>#6C8EBF</LineColor>
+        </Shape>
+
+        <!-- USER USE CASES -->
+
+        <Shape ID="20" Type="Ellipse">
+          <Text>Login to Account</Text>
+          <X>650</X>
+          <Y>100</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <Shape ID="21" Type="Ellipse">
+          <Text>Submit Application</Text>
+          <X>650</X>
+          <Y>180</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="22" Type="Ellipse">
+          <Text>Upload Required&#10;Documents</Text>
+          <X>650</X>
+          <Y>260</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="23" Type="Ellipse">
+          <Text>View Application&#10;Status</Text>
+          <X>650</X>
+          <Y>340</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="24" Type="Ellipse">
+          <Text>View Application&#10;Details</Text>
+          <X>650</X>
+          <Y>420</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <Shape ID="25" Type="Ellipse">
+          <Text>Receive Email&#10;Notifications</Text>
+          <X>450</X>
+          <Y>480</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <Shape ID="26" Type="Ellipse">
+          <Text>Update Profile&#10;Information</Text>
+          <X>450</X>
+          <Y>560</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <Shape ID="27" Type="Ellipse">
+          <Text>View Application&#10;History</Text>
+          <X>450</X>
+          <Y>640</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <Shape ID="28" Type="Ellipse">
+          <Text>Logout</Text>
+          <X>650</X>
+          <Y>500</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#D5E8D4</FillColor>
+          <LineColor>#82B366</LineColor>
+        </Shape>
+
+        <!-- ADMINISTRATOR USE CASES -->
+
+        <Shape ID="30" Type="Ellipse">
+          <Text>Login to Admin&#10;Panel</Text>
+          <X>1050</X>
+          <Y>100</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="31" Type="Ellipse">
+          <Text>View Application&#10;Dashboard</Text>
+          <X>1050</X>
+          <Y>180</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="32" Type="Ellipse">
+          <Text>Search&#10;Applications</Text>
+          <X>850</X>
+          <Y>180</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="33" Type="Ellipse">
+          <Text>Filter Applications</Text>
+          <X>850</X>
+          <Y>260</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="34" Type="Ellipse">
+          <Text>Review Application&#10;Details</Text>
+          <X>1050</X>
+          <Y>260</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="35" Type="Ellipse">
+          <Text>Update Application&#10;Status</Text>
+          <X>1050</X>
+          <Y>340</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="36" Type="Ellipse">
+          <Text>Add Internal Notes</Text>
+          <X>850</X>
+          <Y>340</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="37" Type="Ellipse">
+          <Text>Generate Reports</Text>
+          <X>1050</X>
+          <Y>420</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="38" Type="Ellipse">
+          <Text>Export Data</Text>
+          <X>850</X>
+          <Y>420</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="39" Type="Ellipse">
+          <Text>Send Email&#10;Announcements</Text>
+          <X>850</X>
+          <Y>500</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <Shape ID="40" Type="Ellipse">
+          <Text>Logout</Text>
+          <X>1050</X>
+          <Y>500</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFF2CC</FillColor>
+          <LineColor>#D6B656</LineColor>
+        </Shape>
+
+        <!-- SUPER ADMINISTRATOR USE CASES -->
+
+        <Shape ID="50" Type="Ellipse">
+          <Text>Manage&#10;Administrator&#10;Accounts</Text>
+          <X>1050</X>
+          <Y>700</Y>
+          <Width>150</Width>
+          <Height>70</Height>
+          <FillColor>#FFE6CC</FillColor>
+          <LineColor>#D79B00</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="51" Type="Ellipse">
+          <Text>Configure System&#10;Settings</Text>
+          <X>850</X>
+          <Y>700</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFE6CC</FillColor>
+          <LineColor>#D79B00</LineColor>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+        <Shape ID="52" Type="Ellipse">
+          <Text>View Activity Logs</Text>
+          <X>1050</X>
+          <Y>790</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFE6CC</FillColor>
+          <LineColor>#D79B00</LineColor>
+        </Shape>
+
+        <Shape ID="53" Type="Ellipse">
+          <Text>Backup and&#10;Restore System</Text>
+          <X>850</X>
+          <Y>790</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFE6CC</FillColor>
+          <LineColor>#D79B00</LineColor>
+        </Shape>
+
+        <Shape ID="54" Type="Ellipse">
+          <Text>System Health&#10;Monitoring</Text>
+          <X>850</X>
+          <Y>880</Y>
+          <Width>150</Width>
+          <Height>60</Height>
+          <FillColor>#FFE6CC</FillColor>
+          <LineColor>#D79B00</LineColor>
+        </Shape>
+
+        <!-- Legend Box -->
+        <Shape ID="100" Type="Rectangle">
+          <Text>LEGEND</Text>
+          <X>400</X>
+          <Y>1200</Y>
+          <Width>800</Width>
+          <Height>100</Height>
+          <FillColor>#F5F5F5</FillColor>
+          <LineColor>#666666</LineColor>
+          <FontSize>12</FontSize>
+          <FontStyle>Bold</FontStyle>
+        </Shape>
+
+      </Shapes>
+
+      <Connectors>
+
+        <!-- Guest to Use Cases -->
+        <Connector ID="200" Type="Association">
+          <From>2</From>
+          <To>10</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="201" Type="Association">
+          <From>2</From>
+          <To>11</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="202" Type="Association">
+          <From>2</From>
+          <To>12</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="203" Type="Association">
+          <From>2</From>
+          <To>13</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <!-- User to Use Cases -->
+        <Connector ID="210" Type="Association">
+          <From>3</From>
+          <To>20</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="211" Type="Association">
+          <From>3</From>
+          <To>21</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#82B366</LineColor>
+        </Connector>
+
+        <Connector ID="212" Type="Association">
+          <From>3</From>
+          <To>22</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#82B366</LineColor>
+        </Connector>
+
+        <Connector ID="213" Type="Association">
+          <From>3</From>
+          <To>23</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#82B366</LineColor>
+        </Connector>
+
+        <Connector ID="214" Type="Association">
+          <From>3</From>
+          <To>24</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="215" Type="Association">
+          <From>3</From>
+          <To>25</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="216" Type="Association">
+          <From>3</From>
+          <To>26</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="217" Type="Association">
+          <From>3</From>
+          <To>27</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="218" Type="Association">
+          <From>3</From>
+          <To>28</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <!-- Administrator to Use Cases -->
+        <Connector ID="230" Type="Association">
+          <From>4</From>
+          <To>30</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="231" Type="Association">
+          <From>4</From>
+          <To>31</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#D6B656</LineColor>
+        </Connector>
+
+        <Connector ID="232" Type="Association">
+          <From>4</From>
+          <To>32</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="233" Type="Association">
+          <From>4</From>
+          <To>33</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="234" Type="Association">
+          <From>4</From>
+          <To>34</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#D6B656</LineColor>
+        </Connector>
+
+        <Connector ID="235" Type="Association">
+          <From>4</From>
+          <To>35</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#D6B656</LineColor>
+        </Connector>
+
+        <Connector ID="236" Type="Association">
+          <From>4</From>
+          <To>36</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="237" Type="Association">
+          <From>4</From>
+          <To>37</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="238" Type="Association">
+          <From>4</From>
+          <To>38</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="239" Type="Association">
+          <From>4</From>
+          <To>39</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="240" Type="Association">
+          <From>4</From>
+          <To>40</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <!-- Super Administrator to Use Cases -->
+        <Connector ID="250" Type="Association">
+          <From>5</From>
+          <To>50</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#D79B00</LineColor>
+        </Connector>
+
+        <Connector ID="251" Type="Association">
+          <From>5</From>
+          <To>51</To>
+          <LineWidth>2</LineWidth>
+          <LineColor>#D79B00</LineColor>
+        </Connector>
+
+        <Connector ID="252" Type="Association">
+          <From>5</From>
+          <To>52</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="253" Type="Association">
+          <From>5</From>
+          <To>53</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <Connector ID="254" Type="Association">
+          <From>5</From>
+          <To>54</To>
+          <LineWidth>1.5</LineWidth>
+        </Connector>
+
+        <!-- Inheritance: Super Admin extends Admin -->
+        <Connector ID="300" Type="Generalization">
+          <From>5</From>
+          <To>4</To>
+          <LineWidth>2</LineWidth>
+          <LineStyle>Dashed</LineStyle>
+          <Label>&lt;&lt;extends&gt;&gt;</Label>
+        </Connector>
+
+      </Connectors>
+
+      <Notes>
+        <Note X="420" Y="1225">Bold lines = Primary/Core functionality</Note>
+        <Note X="420" Y="1245">Regular lines = Standard functionality</Note>
+        <Note X="420" Y="1265">Dashed line = Inheritance/Extension relationship</Note>
+        <Note X="750" Y="1235">Color Coding: Blue=Guest | Green=User | Yellow=Admin | Orange=SuperAdmin</Note>
+      </Notes>
+
+      <Title>
+        <Text>Use Case Diagram: Online Information System</Text>
+        <X>500</X>
+        <Y>10</Y>
+        <FontSize>20</FontSize>
+        <FontStyle>Bold</FontStyle>
+      </Title>
+
+      <Subtitle>
+        <Text>Little Flower High School of Peñarrubia Inc.</Text>
+        <X>500</X>
+        <Y>35</Y>
+        <FontSize>14</FontSize>
+        <FontStyle>Italic</FontStyle>
+      </Subtitle>
+
+    </Page>
+  </Pages>
+
+  <Metadata>
+    <Author>Adrian D. Baruela</Author>
+    <Course>Systems Analysis and Design</Course>
+    <Subject>Systems Integration &amp; Architecture</Subject>
+    <Institution>Little Flower High School of Peñarrubia Inc.</Institution>
+    <Date>November 2025</Date>
+    <Description>
+      Comprehensive use case diagram for the Online Information System
+      showing all actors (Guest, User, Administrator, Super Administrator)
+      and their interactions with 28 system use cases covering the complete
+      application management workflow from registration through enrollment.
+    </Description>
+  </Metadata>
+
+</Document>
